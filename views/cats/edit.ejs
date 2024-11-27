@@ -1,0 +1,24 @@
+<body>
+  <h1>Edit <%= cat.name %></h1>
+  <form action="/cats/<%= cat._id %>?_method=PUT" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= cat.name %>" />
+    <br />
+    <label for="description">description:</label>
+    <input
+      type="text"
+      name="description"
+      id="description"
+      value="<%= cat.description %>"
+    />
+    <br />
+    <label for="isCute">Cute?</label>
+    <input type="checkbox" name="isCute" id="isCute" 
+    <% if(cat.isCute){%>
+      checked
+      <%} %>/>
+    <br />
+    <button type="submit">Edit Cat</button>
+  </form>
+  <a href="/cats">Back to see all Cats</a>
+</body>

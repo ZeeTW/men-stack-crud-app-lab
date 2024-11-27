@@ -1,0 +1,9 @@
+<body>
+  <h1>All Cats</h1>
+  <ul>
+    <% allCats.forEach(cat =>{%>
+    <li><a href="/cats/<%= cat._id %>"><%= cat.name %></a></li>
+    <%}) %>
+  </ul>
+  <a href="/cats/new">Add new cute cat!!!!!</a>
+</body>
